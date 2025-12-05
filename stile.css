@@ -490,10 +490,10 @@ body {
 
 .contact-icon {
     height: 18px;
-    max-height: 18px;
+    width: auto;
+    max-width: 40px;
     display: inline-block;
     vertical-align: middle;
-    width: auto;
 }
 
 .partner-link:hover {
