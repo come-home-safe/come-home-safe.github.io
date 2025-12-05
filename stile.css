@@ -489,7 +489,8 @@ body {
 }
 
 .contact-icon {
-    height: 24px;
+    height: 18px;
+    max-height: 18px;
     display: inline-block;
     vertical-align: middle;
     width: auto;
