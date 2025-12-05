@@ -568,6 +568,39 @@ body {
     font-size: 14px;
 }
 
+.language-toggle {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    display: inline-flex;
+    gap: 10px;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #001f3f;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 31, 63, 0.15);
+    z-index: 1000;
+}
+
+.language-toggle button {
+    background: transparent;
+    border: none;
+    color: #001f3f;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.language-toggle button:hover,
+.language-toggle button.active {
+    background: #001f3f;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 31, 63, 0.2);
+}
+
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
