@@ -4,40 +4,226 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt - Come Home Safe</title>
-    <link rel="stylesheet" href="stile.css">
-    <!-- Favicons -->
-    <link rel="icon" href="/assets/Logo/Logo_Inverted.webp">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/Logo/Logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/Logo/Logo.png">
-    <meta name="theme-color" content="#001f3f">
+    <link rel="stylesheet" href="../stile.css">
+    <style>
+        /* Kontakt Page - Dark Theme */
+        .page-dark {
+            background-color: #001f3f;
+            color: #ffffff;
+        }
+
+        .page-dark .page {
+            background-color: #001f3f;
+            border-bottom: 3px solid #ffffff;
+        }
+
+        /* Navigation Banner */
+        .nav-banner {
+            background-color: #001f3f;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #ffffff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-banner .logo-small {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-banner .logo-small img {
+            width: 100%;
+            height: auto;
+        }
+
+        .nav-banner a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 8px 24px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-banner a:hover {
+            background-color: #ffffff;
+            color: #001f3f;
+        }
+
+        /* Dark Page Content */
+        .page-dark .container {
+            background-color: #001f3f;
+            color: #ffffff;
+            padding: 60px 80px;
+        }
+
+        .page-dark .title-sub {
+            color: #ffffff;
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .page-dark .content-section {
+            max-width: 700px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 48px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        .page-dark .content-section h3 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-top: 28px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .page-dark .content-section p {
+            color: #e0e8f0;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .page-dark .content-section strong {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        /* Contact Info Cards */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .contact-card {
+            background-color: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 24px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .contact-card h4 {
+            color: #ffffff;
+            font-size: 18px;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .contact-card p {
+            color: #e0e8f0;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .contact-card a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s ease;
+        }
+
+        .contact-card a:hover {
+            color: #b3d9ff;
+        }
+
+        /* Action Button Dark */
+        .page-dark .action-btn {
+            background-color: #ffffff;
+            color: #001f3f;
+            border: 2px solid #ffffff;
+            font-weight: 700;
+        }
+
+        .page-dark .action-btn:hover {
+            background-color: #001f3f;
+            color: #ffffff;
+            border-color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .nav-banner {
+                padding: 12px 20px;
+            }
+
+            .nav-banner .logo-small {
+                width: 40px;
+                height: 40px;
+            }
+
+            .nav-banner a {
+                font-size: 14px;
+                padding: 6px 18px;
+            }
+
+            .page-dark .container {
+                padding: 40px 24px;
+            }
+
+            .page-dark .title-sub {
+                font-size: 36px;
+            }
+
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <header class="header">
-            <div class="logo-section">
-                <img src="assets/Logo/Logo_Inverted.webp" alt="CHS Logo" class="logo">
+<body class="page-dark">
+    <!-- Navigation Banner -->
+    <nav class="nav-banner">
+        <div class="logo-small">
+            <a href="../index.html">
+                <img src="../assets/Logo/Logo (New)/Logo_New.png" alt="CHS Logo">
+            </a>
+        </div>
+        <a href="../index.html">← Zurück</a>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="page">
+        <div class="container">
+            <header class="header">
                 <h1 class="title-sub">Kontakt</h1>
-            </div>
-        </header>
+            </header>
 
-        <main class="main-content">
-            <div class="content-section">
-                <p>Hast du Fragen oder möchtest mit uns in Kontakt treten? Wir freuen uns, von dir zu hören!</p>
-                
-                <h3>Kontaktinformationen</h3>
-                <p><strong>Email:</strong> dadona@tsn.at</p>
-        
-                
-                <h3>Folge uns</h3>
-                <p>Bleib mit uns in Kontakt über unsere Social-Media-Kanäle und erhalte regelmäßige Updates zu neuen Features und Sicherheitstipps.</p>
-            </div>
-            
-            <div class="buttons-container">
-                <a href="index.html" class="action-btn">Zurück</a>
-            </div>
-        </main>
-    </div>
+            <main class="main-content">
+                <div class="content-section">
+                    <h3>Schreib uns</h3>
+                    <p>Hast du Fragen oder Anregungen? Wir freuen uns auf deine Nachricht!</p>
 
-    <script src="script.js"></script>
+                    <div class="contact-info">
+                        <div class="contact-card">
+                            <h4>📧 Email</h4>
+                            <p><a href="mailto:dadona@tsn.at">dadona@tsn.at</a></p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <script src="../script.js"></script>
 </body>
 </html>

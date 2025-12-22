@@ -3,161 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Come Home Safe</title>
+    <title>Come Home Safe - Sichere Heimwege</title>
     <link rel="stylesheet" href="stile.css">
-    <!-- Favicons -->
-    <link rel="icon" href="/assets/Logo/Logo_Inverted.webp">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/Logo/Logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/Logo/Logo.png">
+    <link rel="icon" type="image/png" href="assets/Logo/Logo (New)/Logo_New.png">
+    <link rel="apple-touch-icon" href="assets/Logo/Logo (New)/Logo_New.png">
     <meta name="theme-color" content="#001f3f">
 </head>
 <body>
-    <!-- Home Section -->
-    <section class="page" id="home">
-        <div class="container">
-            <header class="header">
-                <div class="logo-section">
-                    <img src="assets/Logo/Logo_Inverted.webp" alt="CHS Logo" class="logo">
-                    <h1 class="title">CHS</h1>
-                    <p class="subtitle">Come Home Safe</p>
-                </div>
-            </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="assets/Logo/Logo (New)/Logo_New.png" alt="CHS Logo" class="navbar-logo-img">
+                <span class="navbar-title">CHS</span>
+            </div>
+            <div class="navbar-menu">
+                 <a href="#home" class="nav-link scroll-link" data-i18n="nav.home">Home</a>
+                 <a href="#about" class="nav-link scroll-link" data-i18n="nav.about">Über uns</a>
+                 <a href="#app" class="nav-link scroll-link" data-i18n="nav.app">App</a>
+            </div>
+        </div>
+    </nav>
 
-            <main class="main-content">
-                <div class="buttons-container">
-                    <a href="#was-ist-chs" class="action-btn scroll-link" data-i18n="btn.what">Was ist CHS</a>
-                    <a href="#wer-sind-wir" class="action-btn scroll-link" data-i18n="btn.who">Wer sind wir</a>
-                    <a href="#App" class="action-btn scroll-link" data-i18n="btn.app">App</a>
-                </div>
-            </main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-logo">
+                <img src="assets/Logo/Logo (New)/Logo_New.png" alt="Come Home Safe">
+            </div>
+            <h1 class="hero-title" data-i18n="hero.title">Come Home Safe</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Sicher nach Hause. Jederzeit. Überall.</p>
+            <div class="hero-buttons">
+                    <a href="#about" class="btn btn-primary scroll-link" data-i18n="hero.cta.more">Mehr erfahren</a>
+                    <a href="#app" class="btn btn-secondary scroll-link" data-i18n="hero.cta.app">Zur App</a>
+            </div>
         </div>
     </section>
 
-    <!-- Was ist CHS Section -->
-    <section class="page" id="was-ist-chs">
-        <div class="container">
-            <header class="header">
-                <h1 class="title-sub" data-i18n="heading.what">Was ist CHS</h1>
-            </header>
-
-            <main class="main-content">
-                <div class="content-section">
-                    <p data-i18n="what.intro">Come Home Safe ist eine Initiative zur Verbesserung der Sicherheit auf dem Weg nach Hause. Wir setzen uns für deine Sicherheit ein und bieten verschiedene Tools und Ressourcen, um dich schnell und sicher nach Hause zu bringen.</p>
-                    
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="section-container">
+            <h2 class="section-title" data-i18n="about.title">Über Come Home Safe</h2>
+            
+            <div class="cards-grid">
+                <div class="info-card">
                     <h3 data-i18n="what.mission.title">Unsere Mission</h3>
-                    <p data-i18n="what.mission.body">Wir helfen insbesondere betrunkenen Menschen, schnell und sicher nach Hause zu kommen – ohne Bedenken.</p>
-                    
-                    <h3 data-i18n="what.offer.title">Was wir anbieten</h3>
-                    <p data-i18n="what.offer.body">Ob Taxis, Öffis oder zu Fuß. Wir bringen dich sicher nach Hause.</p>
+                    <p data-i18n="what.mission.body">Wir helfen dir, sicher nach Hause zu kommen – ob mit Taxi, Öffis oder zu Fuß. Deine Sicherheit ist unsere Priorität.</p>
                 </div>
-            </main>
-        </div>
-    </section>
-
-    <!-- Wer sind wir Section -->
-    <section class="page" id="wer-sind-wir">
-        <div class="container">
-            <header class="header">
-                <h1 class="title-sub" data-i18n="heading.who">Wer sind wir</h1>
-            </header>
-
-            <main class="main-content">
-                <div class="content-section">
-                    <p data-i18n="who.intro">Wir sind ein Team von engagierten Schüler, die sich der Sicherheit und dem Wohlbefinden unserer Gemeinschaft widmen. Unser Ziel ist es, ein sicheres Umfeld für alle zu schaffen.</p>
-                    
-                    <h3 data-i18n="who.team.title">Unser Team</h3>
-                    <p data-i18n="who.team.body">Come Home Safe wurde von Schülern der 2. Klasse der HTL Anichstraße gegründet. Wir wollen mehr Sicherheit im österreichischen – und langfristig weltweiten – Straßenverkehr schaffen.</p>
-                    
+                <div class="info-card">
+                    <h3 data-i18n="who.team.title">Wer wir sind</h3>
+                    <p data-i18n="who.team.body">Ein Team von Schülern der HTL Anichstraße, das sich für mehr Sicherheit im Straßenverkehr einsetzt.</p>
+                </div>
+                <div class="info-card">
                     <h3 data-i18n="who.support.title">Unterstützer</h3>
-                    <p data-i18n="who.support.body">Wir bedanken uns bei SWARCO und der HTL Anichstraße für ihre Unterstützung bei unserem Projekt.</p>
+                    <p data-i18n="who.support.body">Wir werden unterstützt von SWARCO und der HTL Anichstraße.</p>
                 </div>
-            </main>
+            </div>
         </div>
     </section>
 
-    <!-- Kontakt/App Section -->
-    <section class="page" id="App">
-        <div class="container">
-            <header class="header">
-                <h1 class="title-sub" data-i18n="heading.app">App</h1>
-            </header>
+    <!-- App Features Section -->
+    <section class="section section-dark" id="app">
+        <div class="section-container">
+            <h2 class="section-title" data-i18n="heading.app">Die App</h2>
+            <p class="section-subtitle" data-i18n="app.subtitle">Moderne Features für deine Sicherheit</p>
 
-            <main class="main-content">
-                <!-- App Showcase with Animated Icons -->
-                <div class="app-showcase-card">
-                    <div class="app-icons-container">
-                        <div class="icon-wrapper">
-                            <div class="animated-icon icon-karte" style="--delay: 0s;" data-feature="Moderner Routenplaner">
-                                <img src="assets/Karte/Karte.png" alt="Karte" class="icon-img">
-                            </div>
-                            <p class="feature-label" data-i18n="features.map">Moderner Routenplaner</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <div class="animated-icon icon-bestbewertet" style="--delay: 0.2s;" data-feature="Zuverlässig">
-                                <img src="assets/Bestbewertet/Bestbewertet.png" alt="Bestbewertet" class="icon-img">
-                            </div>
-                            <p class="feature-label" data-i18n="features.reliable">Zuverlässig</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <div class="animated-icon icon-speed" style="--delay: 0.4s;" data-feature="Schneller Service">
-                                <img src="assets/Speed-Car/Speed-Car.png" alt="Speed Car" class="icon-img">
-                            </div>
-                            <p class="feature-label" data-i18n="features.fast">Schneller Service</p>
-                        </div>
-                        <div class="icon-wrapper">
-                            <div class="animated-icon icon-qr" style="--delay: 0.6s;" data-feature="Schnelle Bezahlung">
-                                <img src="assets/QR-Code/QR-Code.png" alt="QR Code" class="icon-img">
-                            </div>
-                            <p class="feature-label" data-i18n="features.pay">Sichere Bezahlung</p>
-                        </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="assets/Karte/Karte.png" alt="Routenplaner">
                     </div>
-
-                    <div class="app-description">
-                        <h3 data-i18n="app.title">Come Home Safe App</h3>
-                        <p data-i18n="app.status">Die App ist noch in der Entwicklungsphase und noch nicht verfügbar. Treten Sie für weitere Infos unseren Discord-Kanal bei.</p>
-                        <div class="app-download">
-                            <a href="https://discord.gg/GhapCPNFmG" target="_blank" rel="noopener noreferrer" class="partner-link discord-btn" style="margin-top: 12px;">
-                                <img src="assets/Discord.png" alt="Discord" class="contact-icon">
-                                <span data-i18n="app.discord">Join our Discord</span>
-                            </a>
-                        </div>
-                    </div>
+                        <h3 data-i18n="features.map">Moderner Routenplaner</h3>
+                        <p data-i18n="feature.map.body">Optimale Routen finden, schnell und zuverlässig</p>
                 </div>
-            </main>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="assets/Bestbewertet/Bestbewertet.png" alt="Zuverlässig">
+                    </div>
+                        <h3 data-i18n="features.reliable">Zuverlässig</h3>
+                        <p data-i18n="feature.reliable.body">Sichere Partner mit bewährter Qualität</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="assets/Speed-Car/Speed-Car.png" alt="Schneller Service">
+                    </div>
+                        <h3 data-i18n="features.fast">Schneller Service</h3>
+                        <p data-i18n="feature.fast.body">Schnelle und unkomplizierte Abwicklung</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <img src="assets/QR-Code/QR-Code.png" alt="Sichere Bezahlung">
+                    </div>
+                        <h3 data-i18n="features.pay">Sichere Bezahlung</h3>
+                        <p data-i18n="feature.pay.body">Kontaktlose und sichere Zahlungen</p>
+                </div>
+            </div>
+
+            <div class="app-cta">
+                <p data-i18n="app.status">Die App befindet sich noch in der Entwicklungsphase. Erhalte Updates über unseren Discord-Kanal:</p>
+                <a href="https://discord.gg/GhapCPNFmG" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-i18n="app.discord">Discord beitreten</a>
+            </div>
         </div>
     </section>
+
+    
 
     <!-- Footer -->
-    <footer class="footer" id="footer">
+    <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
                 <h4 data-i18n="footer.brand.title">Come Home Safe</h4>
                 <p data-i18n="footer.brand.text">Deine Sicherheit ist unsere Priorität.</p>
             </div>
-            
             <div class="footer-section">
-                <h4 data-i18n="footer.contact.title">Kontakt</h4>
-                <p data-i18n="footer.contact.email">Email: dadona@tsn.at</p>
-                <p data-i18n="footer.contact.address">Adresse: Höhere Technische Bundeslehr- und Versuchsanstalt Innsbruck Anichstraße, Anichstraße 26 - 28, 6020 Innsbruck</p>
-                <a href="https://discord.gg/GhapCPNFmG" target="_blank" rel="noopener noreferrer" class="partner-link" style="margin-top: 12px;">
-                    <img src="assets/Discord.png" alt="Discord" class="contact-icon">
-                    <span data-i18n="footer.contact.discord">Join our Discord</span>
-                </a>
+                    <h4 data-i18n="footer.contact.title">Kontakt</h4>
+                <p><span data-i18n="footer.contact.emailLabel">E-Mail:</span> <a href="mailto:dadona@tsn.at">dadona@tsn.at</a></p>
+                    <p><a href="https://discord.gg/GhapCPNFmG" target="_blank" rel="noopener noreferrer" class="discord-link"><img src="assets/Discord.png" alt="Discord" class="footer-icon"> <span data-i18n="footer.contact.discord">Discord</span></a></p>
             </div>
-            
             <div class="footer-section">
-                <h4 data-i18n="footer.partner.title">Partner</h4>
-                <div class="partners-container">
-                    <a href="https://www.swarco.com/de" target="_blank" rel="noopener noreferrer" class="partner-link">
-                        <span data-i18n="footer.partner.swarco">SWARCO</span>
-                    </a>
-                    <a href="https://htlinn.ac.at/" target="_blank" rel="noopener noreferrer" class="partner-link">
-                        <span data-i18n="footer.partner.htl">CCA - Competence Center HTLBLVA Anichstraße</span>
-                    </a>
-                </div>
+                    <h4 data-i18n="footer.partner.title">Partner</h4>
+                    <p><a href="https://www.swarco.com/de" target="_blank" rel="noopener noreferrer" data-i18n="footer.partner.swarco">SWARCO</a></p>
+                    <p><a href="https://htlinn.ac.at/" target="_blank" rel="noopener noreferrer" data-i18n="footer.partner.htl">CCA - Competence Center HTLBLVA Anichstraße</a></p>
             </div>
         </div>
-        
         <div class="footer-bottom">
             <p data-i18n="footer.bottom">&copy; 2025 Come Home Safe. Alle Rechte vorbehalten.</p>
         </div>
@@ -168,6 +136,6 @@
         <button type="button" data-lang="en">EN</button>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=20251222"></script>
 </body>
 </html>

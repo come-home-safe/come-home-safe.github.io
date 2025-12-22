@@ -39,12 +39,20 @@ handleScrollAnimation();
 // Simple i18n
 const translations = {
     de: {
+        'nav.home': 'Home',
+        'nav.about': 'Über uns',
+        'nav.app': 'App',
+        'hero.title': 'Come Home Safe',
+        'hero.subtitle': 'Sicher nach Hause. Jederzeit. Überall.',
+        'hero.cta.more': 'Mehr erfahren',
+        'hero.cta.app': 'Zur App',
         'btn.what': 'Was ist CHS',
         'btn.who': 'Wer sind wir',
         'btn.app': 'App',
         'heading.what': 'Was ist CHS',
         'heading.who': 'Wer sind wir',
         'heading.app': 'App',
+        'about.title': 'Über Come Home Safe',
         'what.intro': 'Come Home Safe ist eine Initiative zur Verbesserung der Sicherheit auf dem Weg nach Hause. Wir setzen uns für deine Sicherheit ein und bieten verschiedene Tools und Ressourcen, um dich schnell und sicher nach Hause zu bringen.',
         'what.mission.title': 'Unsere Mission',
         'what.mission.body': 'Wir helfen insbesondere betrunkenen Menschen, schnell und sicher nach Hause zu kommen – ohne Bedenken.',
@@ -55,31 +63,44 @@ const translations = {
         'who.team.body': 'Come Home Safe wurde von Schülern der 2. Klasse der HTL Anichstraße gegründet. Wir wollen mehr Sicherheit im österreichischen – und langfristig weltweiten – Straßenverkehr schaffen.',
         'who.support.title': 'Unterstützer',
         'who.support.body': 'Wir bedanken uns bei SWARCO und der HTL Anichstraße für ihre Unterstützung bei unserem Projekt.',
+        'app.subtitle': 'Moderne Features für deine Sicherheit',
         'features.map': 'Moderner Routenplaner',
         'features.reliable': 'Zuverlässig',
         'features.fast': 'Schneller Service',
         'features.pay': 'Sichere Bezahlung',
+        'feature.map.body': 'Optimale Routen finden, schnell und zuverlässig',
+        'feature.reliable.body': 'Sichere Partner mit bewährter Qualität',
+        'feature.fast.body': 'Schnelle und unkomplizierte Abwicklung',
+        'feature.pay.body': 'Kontaktlose und sichere Zahlungen',
         'app.title': 'Come Home Safe App',
         'app.status': 'Die App ist noch in der Entwicklungsphase und noch nicht verfügbar. Treten Sie für weitere Infos unserem Discord-Kanal bei.',
-        'app.discord': 'Join our Discord',
+        'app.discord': 'Discord beitreten',
         'footer.brand.title': 'Come Home Safe',
         'footer.brand.text': 'Deine Sicherheit ist unsere Priorität.',
         'footer.contact.title': 'Kontakt',
-        'footer.contact.email': 'Email: dadona@tsn.at',
+        'footer.contact.emailLabel': 'E-Mail:',
         'footer.contact.address': 'Adresse: Höhere Technische Bundeslehr- und Versuchsanstalt Innsbruck Anichstraße, Anichstraße 26 - 28, 6020 Innsbruck',
-        'footer.contact.discord': 'Join our Discord',
+        'footer.contact.discord': 'Discord',
         'footer.partner.title': 'Partner',
         'footer.partner.swarco': 'SWARCO',
         'footer.partner.htl': 'CCA - Competence Center HTLBLVA Anichstraße',
         'footer.bottom': '© 2025 Come Home Safe. Alle Rechte vorbehalten.'
     },
     en: {
+        'nav.home': 'Home',
+        'nav.about': 'About',
+        'nav.app': 'App',
+        'hero.title': 'Come Home Safe',
+        'hero.subtitle': 'Get home safe. Anytime. Anywhere.',
+        'hero.cta.more': 'Learn more',
+        'hero.cta.app': 'Go to app',
         'btn.what': 'What is CHS',
         'btn.who': 'Who are we',
         'btn.app': 'App',
         'heading.what': 'What is CHS',
         'heading.who': 'Who are we',
         'heading.app': 'App',
+        'about.title': 'About Come Home Safe',
         'what.intro': 'Come Home Safe is an initiative to improve safety on your way home. We focus on your safety and offer tools and resources to get you home quickly and safely.',
         'what.mission.title': 'Our mission',
         'what.mission.body': 'We help people—especially when they are intoxicated—get home quickly and safely, without worries.',
@@ -90,19 +111,24 @@ const translations = {
         'who.team.body': 'Come Home Safe was founded by students of the 2nd class at HTL Anichstraße. We aim to improve road safety in Austria and, in the long term, worldwide.',
         'who.support.title': 'Supporters',
         'who.support.body': 'We thank SWARCO and HTL Anichstraße for supporting our project.',
+        'app.subtitle': 'Modern features for your safety',
         'features.map': 'Modern route planner',
         'features.reliable': 'Reliable',
         'features.fast': 'Fast service',
         'features.pay': 'Secure payment',
+        'feature.map.body': 'Find optimal routes — fast and reliable',
+        'feature.reliable.body': 'Trusted partners with proven quality',
+        'feature.fast.body': 'Quick and hassle-free service',
+        'feature.pay.body': 'Contactless and secure payments',
         'app.title': 'Come Home Safe App',
         'app.status': 'The app is in development and not yet available. Join our Discord for updates.',
         'app.discord': 'Join our Discord',
         'footer.brand.title': 'Come Home Safe',
         'footer.brand.text': 'Your safety is our priority.',
         'footer.contact.title': 'Contact',
-        'footer.contact.email': 'Email: dadona@tsn.at',
+        'footer.contact.emailLabel': 'Email:',
         'footer.contact.address': 'Address: Höhere Technische Bundeslehr- und Versuchsanstalt Innsbruck Anichstraße, Anichstraße 26 - 28, 6020 Innsbruck',
-        'footer.contact.discord': 'Join our Discord',
+        'footer.contact.discord': 'Discord',
         'footer.partner.title': 'Partners',
         'footer.partner.swarco': 'SWARCO',
         'footer.partner.htl': 'CCA - Competence Center HTLBLVA Anichstraße',
@@ -125,13 +151,17 @@ function updateLanguageToggle(lang) {
     const toggle = document.querySelector('.language-toggle');
     if (!toggle) return;
     toggle.querySelectorAll('button[data-lang]').forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === lang);
+        const isActive = btn.dataset.lang === lang;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', String(isActive));
     });
 }
 
 function applyTranslations(lang) {
     const dict = translations[lang] || translations.de;
     currentLang = lang;
+    // reflect language on the HTML element for accessibility and SEO
+    document.documentElement.setAttribute('lang', lang);
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.dataset.i18n;
         if (dict[key]) {
@@ -147,17 +177,42 @@ function setLanguage(lang) {
     applyTranslations(lang);
 }
 
-const languageToggle = document.querySelector('.language-toggle');
-if (languageToggle) {
-    languageToggle.addEventListener('click', (e) => {
-        const btn = e.target.closest('button[data-lang]');
-        if (!btn) return;
-        setLanguage(btn.dataset.lang);
-    });
+// Initialize language system after DOM is fully loaded
+function initializeLanguage() {
+    const languageToggle = document.querySelector('.language-toggle');
+    
+    if (languageToggle) {
+        const langButtons = languageToggle.querySelectorAll('button[data-lang]');
+        
+        langButtons.forEach((btn) => {
+            // Direct click handler
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const lang = btn.dataset.lang;
+                setLanguage(lang);
+                console.log('Language switched to:', lang);
+            });
+        });
+        
+        console.log('Language toggle initialized with', langButtons.length, 'buttons');
+    } else {
+        console.error('Language toggle container not found!');
+    }
+    
+    // Apply initial language
+    const initialLang = detectLanguage();
+    applyTranslations(initialLang);
+    console.log('Initial language set to:', initialLang);
 }
 
-const initialLang = detectLanguage();
-applyTranslations(initialLang);
+// Wait for DOM to be fully loaded
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeLanguage);
+} else {
+    // DOM is already loaded (happens if script is at the end of body)
+    initializeLanguage();
+}
 
 
 
